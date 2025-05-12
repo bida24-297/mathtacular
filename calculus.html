@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculus Notes - Mathtacular</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') no-repeat center center/cover;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(87, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: rgb(87, 155, 218);
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-left: 1rem;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    .btn:hover {
+      background-color: rgb(87, 155, 218);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Calculus Notes</h1>
+
+    <h2>1. What is Calculus?</h2>
+    <p>Calculus is the branch of mathematics that studies change — it includes differentiation and integration.</p>
+
+    <h2>2. Limits</h2>
+    <ul>
+      <li>Describes the behavior of a function as it approaches a certain value</li>
+      <li>Notation: <code>lim<sub>x→a</sub> f(x)</code></li>
+    </ul>
+
+    <h2>3. Derivatives</h2>
+    <ul>
+      <li>Measure the rate of change of a function</li>
+      <li><code>f'(x)</code> or <code>dy/dx</code></li>
+      <li>Rules: Power Rule, Product Rule, Chain Rule</li>
+      <li>Example: d/dx (x²) = 2x</li>
+    </ul>
+
+    <h2>4. Integrals</h2>
+    <ul>
+      <li>Opposite of derivatives — used to calculate area under a curve</li>
+      <li>Notation: ∫f(x) dx</li>
+      <li>Definite vs. Indefinite integrals</li>
+      <li>Example: ∫x dx = (1/2)x² + C</li>
+    </ul>
+
+    <h2>5. Applications</h2>
+    <ul>
+      <li>Velocity and acceleration</li>
+      <li>Optimization problems</li>
+      <li>Area between curves</li>
+    </ul>
+
+    <a class="btn" href="revisionpack.html" onclick="localStorage.setItem('topic','calculus')">Start Revision</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Algebra Notes - Mathtacular</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1596496181871-9681eacf9764') no-repeat center center/cover;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(87, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: rgb(87, 155, 218);
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-left: 1rem;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    .btn:hover {
+      background-color: rgb(87, 155, 218);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Algebra Notes</h1>
+
+    <h2>1. What is Algebra?</h2>
+    <p>Algebra involves using symbols (like x or y) to represent numbers in equations and expressions. It's the foundation of higher-level math.</p>
+
+    <h2>2. Basic Concepts</h2>
+    <ul>
+      <li><strong>Variables:</strong> Letters that stand for unknown values (e.g., x, y)</li>
+      <li><strong>Constants:</strong> Fixed values like 2, -5, or 3.14</li>
+      <li><strong>Expressions:</strong> Combinations of variables, constants, and operations (e.g., 2x + 5)</li>
+      <li><strong>Equations:</strong> Expressions set equal to one another (e.g., 2x + 5 = 15)</li>
+    </ul>
+
+    <h2>3. Solving Equations</h2>
+    <ul>
+      <li>Isolate the variable</li>
+      <li>Perform inverse operations</li>
+      <li>Check your solution by plugging it back in</li>
+    </ul>
+
+    <h2>4. Types of Algebraic Equations</h2>
+    <ul>
+      <li>Linear equations (e.g., 3x + 2 = 11)</li>
+      <li>Quadratic equations (e.g., x² + 5x + 6 = 0)</li>
+      <li>Systems of equations</li>
+    </ul>
+
+    <h2>5. Factoring Techniques</h2>
+    <ul>
+      <li>Common factoring</li>
+      <li>Difference of squares: a² - b² = (a - b)(a + b)</li>
+      <li>Trinomials: x² + bx + c</li>
+    </ul>
+
+    <a class="btn" href="revisionpack.html" onclick="localStorage.setItem('topic','algebra')">Start Revision</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relevant Material - Mathtacular</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1527822618093-743f3e57977c') no-repeat center center/cover;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(87, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .material-section {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    a.material-link {
+      display: inline-block;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a.material-link:hover {
+      background-color: rgb(87, 155, 218);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    
+    </nav>
+  </header>
+
+  <div class="material-section">
+    <h1>Relevant Materials</h1>
+
+    <h2>📚 Textbooks</h2>
+    <ul>
+      <li><a class="material-link" href="https://pdfcoffee.com/mathematics-grade-12-pdf-free.html" target="_blank">Studying the sciences mathematics</a></li>
+      <li><a class="material-link" href="https://archive.org/download/ost-math-everythingmaths_grade12/EverythingMaths_Grade12.pdf" target="_blank">Everything Maths</a></li>
+      <li><a class="material-link" href="https://link.springer.com/book/10.1007/978-1-349-08303-9" target="_blank">Math Makes Sense</a></li>
+    </ul>
+
+    <h2>🎥 Video Resource</h2>
+    <ul>
+        <li><a class="material-link" href="https://youtu.be/grnP3mduZkM" target="_blank">Watch: Introduction to Algebra</a></li>
+        <li><a class="material-link" href="https://www.youtube.com/watch?v=DHDKaIuUGnA&list=PLU_DCVXL8MyMfSj1cUq05oB6enr8aVRGg&pp=0gcJCV8EOCosWNin" target="_blank">Watch: Euclidean Geometry</a></li>
+        <li><a class="material-link" href="https://www.youtube.com/watch?v=-5JSjp4969E&list=PL5KkMZvBpo5D6oNmraS0ZtnkLCKciBhTg" target="_blank">Watch: Application of Calculus</a></li>
+    </ul>
+
+    <h2>🌐 External Websites</h2>
+    <ul>
+      <li><a class="material-link" href="https://www.khanacademy.org" target="_blank">Khan Academy</a></li>
+      <li><a class="material-link" href="https://www.wolframalpha.com" target="_blank">WolframAlpha</a></li>
+      <li><a class="material-link" href="https://www.siyavula.com" target="_blank">Siyavula</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

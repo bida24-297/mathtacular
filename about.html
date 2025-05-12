@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Mathtacular</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1634219325274-53add2ddd28b');
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(84, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(84, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background-image: url(images/about.svg);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .get-started {
+      margin-top: 2rem;
+    }
+
+    .get-started a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: rgb(84, 155, 218);
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .get-started a:hover {
+      background-color: rgb(84, 155, 218);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 13rem;
+      margin-bottom: 0rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>About Us</h1>
+    <p>Our tuitoring platform provides students with interactive learning experience- we offer interactive tools and resources. Our platform also enables flexible scheduling options and improved academic performance at no cost. Stay curious, keep learning, and thank you for being a part of our community!</p>
+  
+    <p>
+        <h3>Ready to dive into the world of numbers? Click the button below to get started and begin exploring all the resources we have for you!</h3>
+    </p>
+    
+    <div class="get-started">
+      <a href="index.html">Get Started</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
+

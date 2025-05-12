@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topics - Mathtacular</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') no-repeat center center/cover;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(87, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .topic {
+      text-align: center;
+      width: 180px;
+      padding: 1rem;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .topic:hover {
+      transform: translateY(-5px);
+    }
+
+    .topic a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .topic-icon {
+      font-size: 50px;
+      margin-bottom: 0.5rem;
+      color: #4CAF50;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+  </style>
+  <!-- Optional icon library -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Select a Topic</h1>
+    <div class="topics">
+
+      <div class="topic">
+        <a href="algebra.html" onclick="localStorage.setItem('topic','algebra')">
+          <div class="topic-icon"><i class="fas fa-square-root-alt"></i></div>
+          <h3>Algebra</h3>
+          <p>Equations, expressions, and variables simplified for you.</p>
+        </a>
+      </div>
+
+      <div class="topic">
+        <a href="geometry.html" onclick="localStorage.setItem('topic','geometry')">
+          <div class="topic-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Geometry</h3>
+          <p>Angles, shapes, and the beauty of spatial math.</p>
+        </a>
+      </div>
+
+      <div class="topic">
+        <a href="calculus.html" onclick="localStorage.setItem('topic','calculus')">
+          <div class="topic-icon"><i class="fas fa-infinity"></i></div>
+          <h3>Calculus</h3>
+          <p>Limits, derivatives, and integrals made simple.</p>
+        </a>
+      </div>
+
+      <div class="topic">
+        <a href="statistics.html" onclick="localStorage.setItem('topic','statistics')">
+          <div class="topic-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Statistics</h3>
+          <p>Data analysis, probabilities, and meaningful numbers.</p>
+        </a>
+      </div>
+
+      <div class="topic">
+        <a href="trigonometry.html" onclick="localStorage.setItem('topic','trigonometry')">
+          <div class="topic-icon"><i class="fas fa-angle-double-right"></i></div>
+          <h3>Trigonometry</h3>
+          <p>Explore triangles, angles, and their relationships.</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

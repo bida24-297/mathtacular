@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Mathtacular</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1625111381856-5cdedf9ae7a4') no-repeat center center/cover;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(87, 155, 218);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(87, 155, 218);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    .testimonial-section {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-section h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .testimonial {
+      background-color: #f1f1f1;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid rgb(87, 155, 218);
+      border-radius: 6px;
+    }
+
+    .testimonial p {
+      margin: 0.5rem 0;
+    }
+
+    .rating {
+      color: #FFD700;
+      font-size: 1.2rem;
+    }
+
+    .share-box {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .share-box textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    .share-box button {
+      background-color: rgb(87, 155, 218);
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .share-box button:hover {
+      background-color: rgb(87, 155, 218);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Mathtacular</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="testimonial.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="testimonial-section">
+    <h1>What Our Users Say</h1>
+
+    <div class="testimonial">
+      <p><strong>Thuso M.</strong></p>
+      <p>"This website is an absolute lifesaver! Whether i need help with homework or quick tests, It is always there when i need it."</p>
+      <div class="rating">★★★★★</div>
+    </div>
+
+    <div class="testimonial">
+      <p><strong>Oaratwa T.</strong></p>
+      <p>"Really helpful. It makes topics more understandable and easy!"</p>
+      <div class="rating">★★★★☆</div>
+    </div>
+
+    <div class="testimonial">
+      <p><strong>Tumisang K.</strong></p>
+      <p>"It is very useful and helps a lot and the best part is it is completely free!"</p>
+      <div class="rating">★★★★★</div>
+    </div>
+
+    <div class="share-box">
+      <h2>Had a great experience with us? Share your story!!</h2>
+      <textarea rows="5" placeholder="Write your testimonial here..."></textarea>
+      <br>
+      <button type="button">Share</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Mathtacular. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
+

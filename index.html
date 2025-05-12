@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Mathtacular</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background-image: url('https://images.unsplash.com/photo-1558021211-6d1403321394');
+          background-size: auto;
+          background-position: center;
+        }
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(87, 155, 218);
+        color: white;
+        padding: 1rem 2rem;
+        }
+
+        .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        }
+
+        .menu-toggle {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        }
+
+        .menu-toggle span {
+        background: white;
+        height: 3px;
+        margin: 4px 0;
+        width: 25px;
+        border-radius: 3px;
+        }
+
+        nav {
+        display: flex;
+        gap: 20px;
+        }
+
+        nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        }
+
+        nav a:hover {
+        text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+        .menu-toggle {
+            display: flex;
+        }
+        nav {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(87, 155, 218);
+            position: absolute;
+            top: 60px;
+            left: 0; 
+            width: 100%;
+            padding: 1rem 2rem;
+        }
+        nav.active {
+            display: flex;
+        }
+        }
+
+        .hero {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+        padding: 6rem 2rem;
+        }
+
+        .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgb(255, 255, 255);
+        }
+
+        .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        text-shadow: 1px 1px 3px none;
+        }
+
+        .resources {
+        text-align: center;
+        padding: 2rem;
+        }
+
+        .resources h2 {
+        margin-bottom: 1rem;
+        }
+
+        .resources a {
+        display: inline-block;
+        margin: 0.5rem 1rem;
+        padding: 1rem 2rem;
+        background-color: rgb(87, 155, 218);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        }
+
+        .resources a:hover {
+        background-color: rgb(87, 155, 218);
+        }
+
+        footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        }
+    </style>
+    </head>
+        <body>
+
+            <header>
+                <div class="logo">Mathtacular</div>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="testimonials.html">Testimonials</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </header>
+        <div class="container">
+            <section class="hero">
+                <h1>Best Online Tuitoring Platform</h1>
+                <p>Our tuitoring platform is designed to aid to student with assignments, preparation and overrall subject comprehension. We are committed to fostering a supportive and enriching educational environment. Join us today and take the first step towards academic success! 🌟</p>
+            </section>
+            <section class="resources">
+                <h1>Explore</h1>
+                    <a href="topics.html">Topics</a>
+                    <a href="revisionpack.html">Revision Pack</a>
+                    <a href="relevantmaterials.html">Relevant Material</a>
+            </section>
+        </div>
+            <footer>
+                &copy; 2025 Mathtacular. All rights reserved.
+            </footer>
+
+            <script>
+                function toggleMenu(){
+                const nav = document.getElementById('navMenu');
+                nav.classList.toggle('active');
+                }
+            </script>
+
+        </body>
+</html>
